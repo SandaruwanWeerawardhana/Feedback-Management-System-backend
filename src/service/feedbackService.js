@@ -36,7 +36,7 @@ export const deleteFeedback = async (id) => {
   return result.affectedRows;
 };
 
-// Unified service interface
+
 export default {
   listAll: getAllFeedbacks,
   findById: getFeedbackById,

@@ -1,17 +1,17 @@
-import mysql from 'mysql2/promise';
-import dotenv from 'dotenv';
+import mysql from "mysql2/promise";
+import dotenv from "dotenv";
 dotenv.config();
 
-const dbName = process.env.DB_NAME || 'feedback';
+const dbName = process.env.DB_NAME || "feedback";
 
 let db;
 
 export const dbInit = async () => {
   try {
     const connection = await mysql.createConnection({
-      host: process.env.DB_HOST || 'localhost',
-      user: process.env.DB_USER || 'root',
-      password: process.env.DB_PASS || '', 
+      host: process.env.DB_HOST || "localhost",
+      user: process.env.DB_USER || "root",
+      password: process.env.DB_PASS || "",
       multipleStatements: true,
     });
 
@@ -19,9 +19,9 @@ export const dbInit = async () => {
     console.log(`Database '${dbName}' ensured.`);
 
     db = await mysql.createConnection({
-      host: process.env.DB_HOST || 'localhost',
-      user: process.env.DB_USER || 'root',
-      password: process.env.DB_PASS || '',  
+      host: process.env.DB_HOST || "localhost",
+      user: process.env.DB_USER || "root",
+      password: process.env.DB_PASS || "",
       database: dbName,
     });
 
@@ -35,9 +35,9 @@ export const dbInit = async () => {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
     `);
-    console.log('Feedback table ensured.');
+    console.log("Feedback table ensured.");
   } catch (err) {
-    console.error('DB init error:', err);
+    console.error("DB init error:", err);
   }
 };
 
