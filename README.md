@@ -1,5 +1,10 @@
 # Feedback Management System
 
+## Backend and Frontend Links
+- **Frontend GitHub Repository:** [Feedback Management System Frontend](https://github.com/SandaruwanWeerawardhana/Feedback-Management-System-frontend)
+- **Backend GitHub Repository:** [Feedback Management System Backend](https://github.com/SandaruwanWeerawardhana/Feedback-Management-System-backend.git)
+
+
 A simple Node.js/Express application for managing feedback entries with a MySQL database.
 
 ## Features
